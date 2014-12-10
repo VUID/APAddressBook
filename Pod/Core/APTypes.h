@@ -19,6 +19,7 @@ typedef NS_ENUM(NSUInteger, APAddressBookAccess)
 };
 
 typedef BOOL(^APContactFilterBlock)(APContact *contact);
+typedef void(^APContactMutationBlock)(APContact *contact, NSMutableArray *contacts);
 
 typedef NS_OPTIONS(NSUInteger , APContactField)
 {
