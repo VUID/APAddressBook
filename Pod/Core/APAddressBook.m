@@ -85,6 +85,7 @@ void APAddressBookExternalChangeCallback(ABAddressBookRef addressBookRef, CFDict
     APContactField fieldMask = self.fieldsMask;
     NSArray *descriptors = self.sortDescriptors;
     APContactFilterBlock filterBlock = self.filterBlock;
+    APContactMutationBlock mutationBlock = self.mutationBlock;
 
 	ABAddressBookRequestAccessWithCompletion(self.addressBook, ^(bool granted, CFErrorRef errorRef)
 	{
@@ -105,6 +106,7 @@ void APAddressBookExternalChangeCallback(ABAddressBookRef addressBookRef, CFDict
                     if (!filterBlock || filterBlock(contact))
                     {
                         [contacts addObject:contact];
+                        if (mutationBlock) mutationBlock(contact, contacts);
                     }
                 }
                 [contacts sortUsingDescriptors:descriptors];

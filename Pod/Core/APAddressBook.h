@@ -15,6 +15,7 @@
 
 @property (nonatomic, assign) APContactField fieldsMask;
 @property (nonatomic, copy) APContactFilterBlock filterBlock;
+@property (nonatomic, copy) APContactMutationBlock mutationBlock;
 @property (nonatomic, strong) NSArray *sortDescriptors;
 
 + (APAddressBookAccess)access;
