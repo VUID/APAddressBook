@@ -13,8 +13,9 @@ Pod::Spec.new do |s|
   s.social_media_url      = "https://twitter.com/alterplay"
   s.screenshot            = "https://dl.dropboxusercontent.com/u/2334198/APAddressBook-git-teaser.png"
   s.ios.deployment_target = "5.0"
-
+	
   s.subspec 'Core' do |sp|
+		sp.dependency 'Mantle', '> 1.3'
     sp.source_files = 'Pod/Core/*.{h,m}'
   end
 
