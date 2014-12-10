@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Mantle.h>
 
-@interface APPhoneWithLabel : NSObject
+@interface APPhoneWithLabel : MTLModel
 
-@property (nonatomic, readonly) NSString *phone;
-@property (nonatomic, readonly) NSString *label;
+@property (nonatomic) NSString *phone;
+@property (nonatomic) NSString *label;
 
 - (id)initWithPhone:(NSString *)phone label:(NSString *)label;
 

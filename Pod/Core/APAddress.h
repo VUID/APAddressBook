@@ -7,15 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Mantle.h>
 
-@interface APAddress : NSObject
+@interface APAddress : MTLModel
 
-@property (nonatomic, readonly) NSString *street;
-@property (nonatomic, readonly) NSString *city;
-@property (nonatomic, readonly) NSString *state;
-@property (nonatomic, readonly) NSString *zip;
-@property (nonatomic, readonly) NSString *country;
-@property (nonatomic, readonly) NSString *countryCode;
+@property (nonatomic) NSString *street;
+@property (nonatomic) NSString *city;
+@property (nonatomic) NSString *state;
+@property (nonatomic) NSString *zip;
+@property (nonatomic) NSString *country;
+@property (nonatomic) NSString *countryCode;
 
 - (id)initWithAddressDictionary:(NSDictionary *)dictionary;
 

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Mantle.h>
 
 typedef NS_ENUM(NSUInteger, APSocialNetworkType)
 {
@@ -16,7 +17,7 @@ typedef NS_ENUM(NSUInteger, APSocialNetworkType)
     APSocialNetworkLinkedIn = 3
 };
 
-@interface APSocialProfile : NSObject
+@interface APSocialProfile : MTLModel
 
 @property (nonatomic, readonly) APSocialNetworkType socialNetwork;
 @property (nonatomic, readonly) NSString *username;
